@@ -20,7 +20,14 @@ interface ServiceItem {
 }
 
 const detailedServices: ServiceItem[] = [
-
+    {
+        title: "Interior Designing",
+        tagline: "Bespoke Environments of Luxury",
+        desc: "We create interior spaces that are as functional as they are beautiful. Our design philosophy combines luxury with comfort, ensuring every room tells a story of elegance and meticulous craftsmanship. From turnkey solutions to specialized joinery, we handle every detail of your interior vision.",
+        details: ["Turnkey Projects", "Joinery Works", "Flooring Solutions", "Ceiling Works", "Partitions", "Wall Cladding", "Commercial Interiors"],
+        image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop",
+        isNew: true
+    },
     {
         title: "Project Planning",
         tagline: "Strategic Blueprints for Success",
@@ -40,14 +47,14 @@ const detailedServices: ServiceItem[] = [
         tagline: "Efficiency and Precision in Every Phase",
         desc: "Our project management team ensures that every structural endeavor is executed with mathematical precision and uncompromising quality. We handle the complex logistics so you can focus on the vision, delivering results on time and beyond expectations.",
         details: ["End-to-End Coordination", "Quality Control & Assurance", "Timeline & Schedule Management", "Resource Optimization"],
-        image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2000&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop"
     },
     {
         title: "Commercial Construction",
         tagline: "High-Performance Workspaces",
         desc: "We build environments that foster productivity and professional pride. Our commercial construction services focus on structural integrity and modern architectural aesthetics, creating landmarks that define the corporate skyline.",
         details: ["Office & Retail Structures", "Industrial Facilities", "Mixed-Use Developments", "Advanced Structural Engineering"],
-        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"
     },
     {
         title: "Residential Construction",
@@ -181,10 +188,15 @@ export default function ServicesPage() {
                                     ))}
                                 </div>
 
-                                <button className={`px-10 py-4 border border-[#D4AF37] text-[#D4AF37] text-[10px] font-black tracking-[0.3em] uppercase transition-all duration-300 hover:bg-[#D4AF37] hover:text-black ${!isDarkMode && 'hover:shadow-lg'
-                                    }`}>
+                                <a 
+                                    href={`https://wa.me/917907694541?text=${encodeURIComponent(`Hello LMT Builders, I would like to inquire about your ${service.title} service.`)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`inline-block px-10 py-4 border border-[#D4AF37] text-[#D4AF37] text-[10px] font-black tracking-[0.3em] uppercase transition-all duration-300 hover:bg-[#D4AF37] hover:text-black ${!isDarkMode && 'hover:shadow-lg'
+                                    }`}
+                                >
                                     Inquire Project
-                                </button>
+                                </a>
                             </div>
                         </div>
                     );

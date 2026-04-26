@@ -76,19 +76,52 @@ export default function ContactPage() {
                     {/* Left Side: Info */}
                     <div ref={infoRef} className="lg:col-span-5 space-y-16">
                         <div className="reveal-stagger">
-                            <h3 className="text-[#D4AF37] text-[10px] font-black tracking-[0.4em] uppercase mb-6">Our Location</h3>
-                            <p className="text-3xl font-black text-[#1a1a1a] leading-tight uppercase tracking-tighter">
-                                LMT Builders & <br /> Developers Pvt. Ltd.<br />
-                                <span className="text-[#D4AF37]">Business Bay, Tower A</span><br />
-                                Suite 1204, Dubai, UAE
-                            </p>
+                            <h3 className="text-[#D4AF37] text-[10px] font-black tracking-[0.4em] uppercase mb-6">Our Locations</h3>
+                            <div className="space-y-12">
+                                <div>
+                                    <span className="text-[#D4AF37] text-[10px] font-black tracking-[0.2em] uppercase mb-2 block">Qatar Office</span>
+                                    <p className="text-2xl font-black text-[#1a1a1a] leading-tight uppercase tracking-tighter">
+                                        Next to Asmakh Mall,<br />
+                                        Al Sadd St, Doha, Qatar
+                                    </p>
+                                </div>
+                                <div>
+                                    <span className="text-[#D4AF37] text-[10px] font-black tracking-[0.2em] uppercase mb-2 block">India Office</span>
+                                    <p className="text-2xl font-black text-[#1a1a1a] leading-tight uppercase tracking-tighter">
+                                        Opp. Private Bus Station,<br />
+                                        Aban Junction, Pathanamthitta,<br />
+                                        Kerala, 689645
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="reveal-stagger">
                             <h3 className="text-[#D4AF37] text-[10px] font-black tracking-[0.4em] uppercase mb-6">Inquiries</h3>
-                            <div className="space-y-4">
-                                <p className="text-2xl font-black text-[#1a1a1a] hover:text-[#D4AF37] transition-colors cursor-pointer tracking-tighter uppercase">info@lmtbuilders.com</p>
-                                <p className="text-4xl font-black text-[#1a1a1a] tracking-tighter">+971 4 123 4567</p>
+                            <div className="space-y-6">
+                                <a href="mailto:info@lmtbuilders.com" className="text-2xl font-black text-[#1a1a1a] hover:text-[#D4AF37] transition-colors cursor-pointer tracking-tighter uppercase block">info@lmtbuilders.com</a>
+                                <div className="space-y-2">
+                                    <a href="tel:+918111936632" className="text-3xl font-black text-[#1a1a1a] hover:text-[#D4AF37] transition-colors block tracking-tighter">+91 81119 36632</a>
+                                    <a href="tel:+917907694541" className="text-3xl font-black text-[#1a1a1a] hover:text-[#D4AF37] transition-colors block tracking-tighter">+91 79076 94541</a>
+                                </div>
+                                <div className="flex gap-4 pt-2">
+                                    <a 
+                                        href="https://wa.me/918111936632" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 border border-[#D4AF37] text-[#D4AF37] text-[10px] font-black tracking-widest uppercase hover:bg-[#D4AF37] hover:text-white transition-all"
+                                    >
+                                        WhatsApp 1
+                                    </a>
+                                    <a 
+                                        href="https://wa.me/917907694541" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 border border-[#D4AF37] text-[#D4AF37] text-[10px] font-black tracking-widest uppercase hover:bg-[#D4AF37] hover:text-white transition-all"
+                                    >
+                                        WhatsApp 2
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -159,7 +192,7 @@ export default function ContactPage() {
             {/* MAP SECTION */}
             <section ref={mapRef} className="h-[60vh] w-full grayscale contrast-125 brightness-75 hover:grayscale-0 transition-all duration-1000 relative">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115535.80718501168!2d55.2017387!3d25.186637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4334ad467883%3A0x683c31671239c01d!2sBusiness%20Bay%20-%20Dubai!5e0!3m2!1sen!2sae!4v1714000000000!5m2!1sen!2sae" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.359218698!2d51.4989!3d25.2858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45da5566666667%3A0x6666666666666667!2sAl%20Sadd%20St%2C%20Doha%2C%20Qatar!5e0!3m2!1sen!2sqa!4v1714000000000!5m2!1sen!2sqa" 
                     width="100%" 
                     height="100%" 
                     style={{ border: 0 }} 
@@ -168,7 +201,7 @@ export default function ContactPage() {
                 />
                 <div className="absolute inset-0 pointer-events-none border-[20px] border-white/5" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#D4AF37] px-8 py-4 text-black text-[10px] font-black tracking-widest uppercase shadow-2xl pointer-events-none">
-                    LMT HQ Location
+                    LMT Qatar Office
                 </div>
             </section>
 

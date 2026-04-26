@@ -46,18 +46,33 @@ export default function Contact() {
 
           <div className="flex flex-col gap-12 mt-12">
             <div className="contact-reveal">
-              <span className="text-[10px] font-black tracking-[0.3em] uppercase text-[#D4AF37] mb-4 block">Head Office</span>
-              <p className="text-2xl font-black text-[#1a1a1a] leading-tight">
-                LMT Builders & Developers <br />
-                Business Bay, Tower A, <br />
-                Suite 1204, Dubai, UAE
-              </p>
+              <span className="text-[10px] font-black tracking-[0.3em] uppercase text-[#D4AF37] mb-4 block">Our Offices</span>
+              <div className="space-y-8">
+                <div>
+                  <span className="text-[10px] font-bold tracking-widest text-[#1a1a1a]/40 uppercase mb-2 block">Qatar</span>
+                  <p className="text-xl font-black text-[#1a1a1a] leading-tight">
+                    Next to Asmakh Mall, <br />
+                    Al Sadd St, Doha, Qatar
+                  </p>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold tracking-widest text-[#1a1a1a]/40 uppercase mb-2 block">India</span>
+                  <p className="text-xl font-black text-[#1a1a1a] leading-tight">
+                    Opp. Private Bus Station, <br />
+                    Aban Junction, Pathanamthitta, <br />
+                    Kerala, 689645
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="contact-reveal">
               <span className="text-[10px] font-black tracking-[0.3em] uppercase text-[#D4AF37] mb-4 block">Inquiries</span>
-              <p className="text-2xl font-black text-[#1a1a1a]">info@lmtbuilders.com</p>
-              <p className="text-2xl font-black text-[#D4AF37] mt-2">+971 4 123 4567</p>
+              <a href="mailto:info@lmtbuilders.com" className="text-2xl font-black text-[#1a1a1a] hover:text-[#D4AF37] transition-colors block mb-4 uppercase tracking-tighter">info@lmtbuilders.com</a>
+              <div className="flex flex-col gap-2">
+                <a href="tel:+918111936632" className="text-2xl font-black text-[#D4AF37] hover:text-[#1a1a1a] transition-colors tracking-tighter">+91 81119 36632</a>
+                <a href="tel:+917907694541" className="text-2xl font-black text-[#D4AF37] hover:text-[#1a1a1a] transition-colors tracking-tighter">+91 79076 94541</a>
+              </div>
             </div>
           </div>
         </div>

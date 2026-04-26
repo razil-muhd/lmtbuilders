@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -234,6 +234,14 @@ export default function Hero({ splashDone }: { splashDone?: boolean }) {
   const socialRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Independent animation for 3D model container
   useEffect(() => {
@@ -396,12 +404,13 @@ export default function Hero({ splashDone }: { splashDone?: boolean }) {
             <OrbitControls
               enableZoom={false}
               enablePan={false}
+              enableRotate={!isMobile}
               minPolarAngle={Math.PI / 5}
               maxPolarAngle={Math.PI / 2.2}
             />
           </Canvas>
           <div className="absolute bottom-10 right-6 pointer-events-none">
-            <span className="text-[8px] text-white/20 tracking-[0.3em] uppercase">Interactive 3D Model</span>
+            <span className="text-[8px] text-white/20 tracking-[0.3em] uppercase">{isMobile ? "Interactive 3D Model" : "Drag to Rotate Model"}</span>
           </div>
         </div>
       </div>

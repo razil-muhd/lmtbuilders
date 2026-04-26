@@ -38,6 +38,11 @@ export default function Footer() {
                         <p className="text-white/60 text-sm leading-relaxed mb-8 max-w-xs">
                             Elevating architectural standards through innovative design and meticulous craftsmanship. Building your vision with precision and luxury.
                         </p>
+                        <div className="mb-8">
+                            <a href="mailto:info@lmtbuilders.com" className="text-[#D4AF37] text-sm hover:text-white transition-colors duration-300 font-medium">
+                                info@lmtbuilders.com
+                            </a>
+                        </div>
                         <div className="flex gap-4">
                             {["facebook", "instagram", "linkedin", "twitter"].map((social) => (
                                 <a
